@@ -7,25 +7,50 @@ export const Home = styled.section`
     grid-template-columns: repeat(2, 2fr);
     align-items: center;
     padding: 80px 0 80px 6%;
+
+    @media (max-width: 1200px) {
+        padding: 80px 2%;
+        grid-template-columns: 1fr;
+        height: 100%;
+        gap: 4rem;
+    }
 `
 export const HomeText = styled.main`
-
+    @media (max-width: 1200px) {
+        text-align: center;
+    }
 `
 export const Banner = styled.img`
     width: 250px;
     height: auto;
+
+    @media (max-width: 600px) {
+        width: 200px;
+    }
+
+    @media (max-width: 334px) {
+        width: 150px;
+    }
 `
 export const H1 = styled.h1`
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 1.5rem;
+
+    @media (max-width: 334px) {
+        font-size: 2.7rem;
+    }
 `
 export const Paragraph = styled.p`
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.3;
     max-width: 580px;
+
+    @media (max-width: 1200px) {
+        max-width: 100%;
+    }
 `
 export const H3 = styled.h3`
     color: #999;
@@ -57,7 +82,12 @@ export const Colors = styled.div`
     margin-top: 1rem;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
+
+    @media (max-width: 1200px) {
+        justify-content: center;
+    }
 `
 export const Color = styled.div`
     width: 40px;
@@ -91,9 +121,16 @@ export const HomeImage = styled.figure`
 `
 export const Image = styled.img`
     width: 350px;
-    max-width: 100%;
     height: auto;
     transform: rotate(-8deg);
+
+    @media (max-width: 600px) {
+        width: 250px;
+    }
+
+    @media (max-width: 334px) {
+        width: 200px;
+    }
 `
 export const Circle = styled.div`
     position: absolute;
@@ -107,4 +144,8 @@ export const Circle = styled.div`
     background-color: #0b839e;
     clip-path: circle(750px at right 950px);
     transition: background-color 0.3s ease;
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
 `

@@ -1,11 +1,31 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Header, Logo, Image, NavBar, 
 NavList, List, NavLink, MenuIcon } from "./styled";
 import logo from "../../assets/logo.png"
 import { BiMenu } from "react-icons/bi"
+import { IoClose } from "react-icons/io5"
 
 export default function header() {
-    const [menuIcon] = useState(<BiMenu/>)
+    const [menuIcon, setMenuIcon] = useState(<BiMenu/>)
+    const navRef = useRef(null)
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            navRef.current.classList.remove("active")
+            setMenuIcon(<BiMenu/>)
+        })
+    }, [])
+
+    function menuShow() {
+        if(navRef.current.classList.contains("active")) {
+            navRef.current.classList.remove("active")
+            setMenuIcon(<BiMenu/>)
+        }
+        else {
+            navRef.current.classList.add("active")
+            setMenuIcon(<IoClose/>)
+        }
+    }
 
     return(
         <Header>
@@ -13,7 +33,7 @@ export default function header() {
                 <Image src={logo} alt="Logo"/>
             </Logo>
 
-            <NavBar>
+            <NavBar ref={navRef}>
                 <NavList>
                     <List>
                         <NavLink href="#">Mac</NavLink>
@@ -39,7 +59,7 @@ export default function header() {
                 </NavList>
             </NavBar>
 
-            <MenuIcon>{menuIcon}</MenuIcon>
+            <MenuIcon onClick={menuShow}>{menuIcon}</MenuIcon>
         </Header>
     )
 }
