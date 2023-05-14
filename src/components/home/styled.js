@@ -53,7 +53,7 @@ export const Paragraph = styled.p`
     }
 `
 export const H3 = styled.h3`
-    color: #999;
+    color: #9d9e9f;
     font-size: 1.1rem;
     font-weight: 600;
     margin: 1rem 0;
@@ -118,6 +118,10 @@ export const Color = styled.div`
 export const HomeImage = styled.figure`
     z-index: 1;
     text-align: center;
+
+    @media (max-width: 1200px) {
+        z-index: 0;
+    }
 `
 export const Image = styled.img`
     width: 350px;

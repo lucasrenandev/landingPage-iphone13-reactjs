@@ -26,7 +26,7 @@ export const NavBar = styled.nav`
         right: 0;
         width: 100%;
         height: auto;
-        background-color: #0B839E;
+        background-color: #0b839e;
         z-index: 1000;
         transition: top 0.4s ease;
 
@@ -54,7 +54,7 @@ export const List = styled.li`
 
     @media (max-width: 980px) {
         &:not(:last-child) {
-            margin: 10px 0 10px 0;
+            margin: 0 0 10px 0;
         }
     }
 `
