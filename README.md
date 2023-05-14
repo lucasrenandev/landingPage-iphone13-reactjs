@@ -1,3 +1,3 @@
 ## ReactJS + Styled Components
 
-![iphone13](https://github.com/lucasrenandns/landingPage-iphone13-reactjs/assets/97764446/dc5ef979-6a4d-401d-8a06-05c892720f5b)
+![LP-iphone13](https://github.com/lucasrenandns/landingPage-iphone13-reactjs/assets/97764446/d6373c24-abe8-4c97-8bfb-9289fd17af9a)
